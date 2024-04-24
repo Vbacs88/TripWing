@@ -19,6 +19,8 @@ public class userDashboard extends javax.swing.JFrame {
     
     public userDashboard() {
         initComponents();
+        acc_name.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
+        ud_label.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
     }
     
     Color navcolor = new Color(255,255,255);
@@ -238,8 +240,6 @@ public class userDashboard extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         SessionClass sess = SessionClass.getInstance();
-        acc_name.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
-        ud_label.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
         int user_id = sess.getUid();
         if(user_id == 0){
             JOptionPane.showMessageDialog(null, "No account, Log in first!");

@@ -24,10 +24,10 @@ public class adminDashboard extends javax.swing.JFrame {
     public adminDashboard() {
         initComponents();
         displayData();
-        acc_name.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
-        user_dis.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
-        user_dis1.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
-        content.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 10));
+        acc_name.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
+        user_dis.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
+        user_dis1.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
+        content.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 10));
     }
     
      public void displayData(){
@@ -99,6 +99,11 @@ public class adminDashboard extends javax.swing.JFrame {
 
         user_dis.setForeground(new java.awt.Color(0, 0, 0));
         user_dis.setText("EDIT");
+        user_dis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                user_disMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout editPanelLayout = new javax.swing.GroupLayout(editPanel);
         editPanel.setLayout(editPanelLayout);
@@ -332,6 +337,10 @@ public class adminDashboard extends javax.swing.JFrame {
     private void addPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addPanelMouseExited
         addPanel.setBackground(navcolor);
     }//GEN-LAST:event_addPanelMouseExited
+
+    private void user_disMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_disMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_user_disMouseClicked
 
     /**
      * @param args the command line arguments

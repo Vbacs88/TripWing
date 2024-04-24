@@ -10,24 +10,34 @@ import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FontManager {
 
-    public static Font customFont = null;
+    private static final Map<String, Font> fonts = new HashMap<>();
 
     static {
+        loadFont("Poppins-ExtraBold", "/fonts/Poppins-ExtraBold.ttf");
+        loadFont("Poppins-Regular", "/fonts/Poppins-Regular.ttf");
+        // Add more fonts as needed
+    }
+
+    private static void loadFont(String fontName, String path) {
         try {
-            InputStream fontStream = FontManager.class.getResourceAsStream("/fonts/Poppins-ExtraBold.ttf");
-            customFont = Font.createFont(Font.TRUETYPE_FONT, fontStream);
+            InputStream fontStream = FontManager.class.getResourceAsStream(path);
+            Font font = Font.createFont(Font.TRUETYPE_FONT, fontStream);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(customFont);
+            ge.registerFont(font);
+            fonts.put(fontName, font);
         } catch (IOException | FontFormatException e) {
             e.printStackTrace();
         }
     }
 
-    public static Font getCustomFont() {
-        return customFont;
+    public static Font getFont(String fontName) {
+        return fonts.get(fontName);
     }
 }
+
 

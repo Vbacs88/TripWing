@@ -24,7 +24,7 @@ public class addUsers extends javax.swing.JFrame {
      */
     public addUsers() {
         initComponents();
-        label_sess.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 12));
+        label_sess.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 12));
     }
     
     public boolean duplicateCheck(){

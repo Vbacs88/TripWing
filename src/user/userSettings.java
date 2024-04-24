@@ -26,6 +26,9 @@ public class userSettings extends javax.swing.JFrame {
     
     public userSettings() {
         initComponents();
+        acc_name.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
+        ud_label.setFont(FontManager.getFont("Poppins-ExtraBold").deriveFont(Font.PLAIN, 13));
+        u_id.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 10));
     }
     
     
@@ -340,8 +343,6 @@ public class userSettings extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         SessionClass sess = SessionClass.getInstance();
-        acc_name.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
-        ud_label.setFont(FontManager.getCustomFont().deriveFont(Font.PLAIN, 13));
         int user_id = sess.getUid();
         if(user_id == 0){
             JOptionPane.showMessageDialog(null, "No account, Log in first!");
