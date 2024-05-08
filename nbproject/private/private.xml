@@ -4,9 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/admin/addUsers.java</file>
-            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/config/SessionClass.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/config/PasswordHasher.java</file>
             <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/admin/adminDashboard.java</file>
-            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/admin/usersForm.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/tripwing/registerForm.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/resourcesIcons/exit-05.png</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/config/SessionClass.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/user/userDashboard.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/tripwing/logInPanel.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/user/userSettings.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/guiUtil/FontManager.java</file>
+            <file>file:/C:/Users/KANYE%20YEAST/Documents/AAA%20Program/TripWing/src/config/dbConnector.java</file>
         </group>
     </open-files>
 </project-private>
