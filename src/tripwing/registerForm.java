@@ -139,7 +139,6 @@ public class registerForm extends javax.swing.JFrame {
 
         auth_label.setBackground(new java.awt.Color(249, 249, 249));
         auth_label.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin" }));
-        auth_label.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 

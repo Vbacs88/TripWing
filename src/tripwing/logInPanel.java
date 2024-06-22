@@ -6,11 +6,11 @@
 package tripwing;
 
 import admin.adminDashboard;
+import com.formdev.flatlaf.FlatLightLaf;
 import config.FontManager;
 import config.PasswordHasher;
 import config.SessionClass;
 import config.dbConnector;
-import java.awt.Color;
 import java.awt.Font;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -64,13 +64,8 @@ public class logInPanel extends javax.swing.JFrame {
     
     public void startUp(){
         text1.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
-        text2.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
-        user.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
-        snu.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
-        jlogin.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
         user.setBorder(new EmptyBorder(0, 10, 0, 0));
         pass.setBorder(new EmptyBorder(0, 10, 0, 0));
-        jlogin.setBackground(Color.WHITE);
     }
     
     /**
@@ -82,8 +77,6 @@ public class logInPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinner1 = new javax.swing.JSpinner();
-        jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         text1 = new javax.swing.JLabel();
@@ -97,17 +90,6 @@ public class logInPanel extends javax.swing.JFrame {
         jlogin = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -128,9 +110,9 @@ public class logInPanel extends javax.swing.JFrame {
         text1.setText("Username");
 
         user.setBackground(new java.awt.Color(249, 249, 249));
-        user.setBorder(null);
         user.setMaximumSize(new java.awt.Dimension(7, 20));
         user.setMinimumSize(new java.awt.Dimension(7, 20));
+        user.setSelectionColor(new java.awt.Color(0, 0, 102));
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userActionPerformed(evt);
@@ -138,6 +120,7 @@ public class logInPanel extends javax.swing.JFrame {
         });
 
         text2.setBackground(new java.awt.Color(0, 0, 0));
+        text2.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
         text2.setForeground(new java.awt.Color(23, 35, 77));
         text2.setText("Password");
 
@@ -173,6 +156,7 @@ public class logInPanel extends javax.swing.JFrame {
         );
 
         snu.setBackground(new java.awt.Color(0, 0, 0));
+        snu.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
         snu.setForeground(new java.awt.Color(23, 35, 77));
         snu.setText("Sign up");
         snu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -193,15 +177,12 @@ public class logInPanel extends javax.swing.JFrame {
         });
 
         pass.setBackground(new java.awt.Color(249, 249, 249));
-        pass.setBorder(null);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourcesIcons/logo1-04.png"))); // NOI18N
 
         jlogin.setBackground(new java.awt.Color(255, 255, 255));
-        jlogin.setFont(getFont());
+        jlogin.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
         jlogin.setText("LOGIN");
-        jlogin.setBorder(null);
-        jlogin.setBorderPainted(false);
         jlogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jloginMouseEntered(evt);
@@ -269,6 +250,9 @@ public class logInPanel extends javax.swing.JFrame {
                     .addComponent(jlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72))
         );
+
+        user.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
+        pass.setFont(FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 590, -1));
 
@@ -372,21 +356,13 @@ public class logInPanel extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(logInPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(logInPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(logInPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(logInPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            UIManager.setLookAndFeel( new FlatLightLaf() );
+            } catch( Exception ex ) {
+                System.err.println( "Failed to initialize LaF" );
         }
+        UIManager.put( "Button.arc", 6 );
+        
+        
         //</editor-fold>
         //</editor-fold>
 
@@ -404,10 +380,8 @@ public class logInPanel extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JButton jlogin;
     private javax.swing.JPasswordField pass;
     private javax.swing.JLabel snu;

@@ -57,5 +57,22 @@ public class dbConnector {
             }
         
         }
+        
+        //Function to delete data
+        public void deleteData(String sql){
+            try{
+                PreparedStatement pst = connect.prepareStatement(sql);
+                    int rowsUpdated = pst.executeUpdate();
+                        if(rowsUpdated > 0){
+                            JOptionPane.showMessageDialog(null, "Data Deleted Successfully!");
+                        }else{
+                            System.out.println("Data Delete Failed!");
+                        }
+                        pst.close();
+            }catch(SQLException ex){
+                System.out.println("Connection Error: "+ex);
+            }
+        
+        }
     
 }

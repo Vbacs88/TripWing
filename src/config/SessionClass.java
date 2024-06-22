@@ -19,10 +19,10 @@ public class SessionClass {
     private String usn;
     private String type;
     private String status;
+    private String auth;
     
     private SessionClass(){
-        
-        
+          
     }
 
     public int getUid() {
@@ -93,6 +93,12 @@ public class SessionClass {
         this.status = status;
     }
     
-    
+    public String getAuth() {
+        return auth;
+    }
+
+    public void getAuth(String auth) {
+        this.auth = auth;
+    }
     
 }

@@ -22,6 +22,8 @@ public class FontManager {
         loadFont("Poppins-Regular", "/fonts/Poppins-Regular.ttf");
         // Add more fonts as needed
     }
+    //sample
+    //FontManager.getFont("Poppins-Regular").deriveFont(Font.PLAIN, 12)
 
     private static void loadFont(String fontName, String path) {
         try {
